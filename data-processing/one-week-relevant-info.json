@@ -1,0 +1,851 @@
+{
+    "04/12/2020": {
+        "00:00": {
+            "Air Temperature": 50.72,
+            "Total Rain": 39.7,
+            "Precipitation Type": 60
+        },
+        "01:00": {
+            "Air Temperature": 51.08,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "02:00": {
+            "Air Temperature": 51.8,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "03:00": {
+            "Air Temperature": 51.980000000000004,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "04:00": {
+            "Air Temperature": 52.519999999999996,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "05:00": {
+            "Air Temperature": 51.980000000000004,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "06:00": {
+            "Air Temperature": 49.82,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "07:00": {
+            "Air Temperature": 50.900000000000006,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "08:00": {
+            "Air Temperature": 50.0,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "09:00": {
+            "Air Temperature": 52.519999999999996,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "10:00": {
+            "Air Temperature": 50.72,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "11:00": {
+            "Air Temperature": 54.5,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "12:00": {
+            "Air Temperature": 57.379999999999995,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "13:00": {
+            "Air Temperature": 56.66,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "14:00": {
+            "Air Temperature": 57.92,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "15:00": {
+            "Air Temperature": 57.74,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "16:00": {
+            "Air Temperature": 60.980000000000004,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "17:00": {
+            "Air Temperature": 58.46,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "18:00": {
+            "Air Temperature": 59.900000000000006,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "19:00": {
+            "Air Temperature": 61.519999999999996,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "20:00": {
+            "Air Temperature": 60.08,
+            "Total Rain": 39.7,
+            "Precipitation Type": 0
+        },
+        "21:00": {
+            "Air Temperature": 59.18,
+            "Total Rain": 39.7,
+            "Precipitation Type": 60
+        },
+        "22:00": {
+            "Air Temperature": 58.1,
+            "Total Rain": 39.9,
+            "Precipitation Type": 0
+        },
+        "23:00": {
+            "Air Temperature": 58.1,
+            "Total Rain": 40.0,
+            "Precipitation Type": 60
+        }
+    },
+    "04/13/2020": {
+        "00:00": {
+            "Air Temperature": 57.56,
+            "Total Rain": 40.0,
+            "Precipitation Type": 0
+        },
+        "01:00": {
+            "Air Temperature": 57.019999999999996,
+            "Total Rain": 40.2,
+            "Precipitation Type": 60
+        },
+        "02:00": {
+            "Air Temperature": 42.08,
+            "Total Rain": 41.6,
+            "Precipitation Type": 60
+        },
+        "03:00": {
+            "Air Temperature": 43.34,
+            "Total Rain": 42.5,
+            "Precipitation Type": 0
+        },
+        "04:00": {
+            "Air Temperature": 39.92,
+            "Total Rain": 42.7,
+            "Precipitation Type": 60
+        },
+        "05:00": {
+            "Air Temperature": 38.66,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "06:00": {
+            "Air Temperature": 37.94,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "07:00": {
+            "Air Temperature": 37.94,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "08:00": {
+            "Air Temperature": 38.66,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "09:00": {
+            "Air Temperature": 38.84,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "10:00": {
+            "Air Temperature": 39.38,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "11:00": {
+            "Air Temperature": 39.56,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "12:00": {
+            "Air Temperature": 41.9,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "13:00": {
+            "Air Temperature": 44.24,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "14:00": {
+            "Air Temperature": 44.42,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "15:00": {
+            "Air Temperature": 44.06,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "16:00": {
+            "Air Temperature": 43.879999999999995,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "17:00": {
+            "Air Temperature": 44.6,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "18:00": {
+            "Air Temperature": 43.7,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "19:00": {
+            "Air Temperature": 42.8,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "20:00": {
+            "Air Temperature": 41.9,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "21:00": {
+            "Air Temperature": 41.0,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "22:00": {
+            "Air Temperature": 40.82,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "23:00": {
+            "Air Temperature": 39.74,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        }
+    },
+    "04/14/2020": {
+        "00:00": {
+            "Air Temperature": 39.38,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "01:00": {
+            "Air Temperature": 38.12,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "02:00": {
+            "Air Temperature": 36.68,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "03:00": {
+            "Air Temperature": 35.78,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "04:00": {
+            "Air Temperature": 34.88,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "05:00": {
+            "Air Temperature": 33.62,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "06:00": {
+            "Air Temperature": 33.08,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "07:00": {
+            "Air Temperature": 34.16,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "08:00": {
+            "Air Temperature": 34.16,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "09:00": {
+            "Air Temperature": 37.04,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "10:00": {
+            "Air Temperature": 36.86,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "11:00": {
+            "Air Temperature": 37.76,
+            "Total Rain": 42.7,
+            "Precipitation Type": 0
+        },
+        "12:00": {
+            "Air Temperature": 35.96,
+            "Total Rain": 42.7,
+            "Precipitation Type": 70
+        },
+        "13:00": {
+            "Air Temperature": 35.96,
+            "Total Rain": 42.8,
+            "Precipitation Type": 60
+        },
+        "14:00": {
+            "Air Temperature": 38.84,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "15:00": {
+            "Air Temperature": 39.38,
+            "Total Rain": 42.8,
+            "Precipitation Type": 60
+        },
+        "16:00": {
+            "Air Temperature": 39.2,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "17:00": {
+            "Air Temperature": 39.92,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "18:00": {
+            "Air Temperature": 41.0,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "19:00": {
+            "Air Temperature": 40.28,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "20:00": {
+            "Air Temperature": 39.56,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "21:00": {
+            "Air Temperature": 39.38,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "22:00": {
+            "Air Temperature": 38.480000000000004,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "23:00": {
+            "Air Temperature": 37.22,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        }
+    },
+    "04/15/2020": {
+        "00:00": {
+            "Air Temperature": 37.22,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "01:00": {
+            "Air Temperature": 35.96,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "02:00": {
+            "Air Temperature": 35.24,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "03:00": {
+            "Air Temperature": 34.16,
+            "Total Rain": 42.8,
+            "Precipitation Type": 0
+        },
+        "04:00": {
+            "Air Temperature": 29.84,
+            "Total Rain": 42.9,
+            "Precipitation Type": 70
+        },
+        "06:00": {
+            "Air Temperature": 30.02,
+            "Total Rain": 43.6,
+            "Precipitation Type": 60
+        },
+        "07:00": {
+            "Air Temperature": 28.94,
+            "Total Rain": 44.1,
+            "Precipitation Type": 70
+        },
+        "08:00": {
+            "Air Temperature": 30.02,
+            "Total Rain": 45.0,
+            "Precipitation Type": 70
+        },
+        "09:00": {
+            "Air Temperature": 29.84,
+            "Total Rain": 45.1,
+            "Precipitation Type": 70
+        },
+        "10:00": {
+            "Air Temperature": 30.56,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "11:00": {
+            "Air Temperature": 32.54,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "12:00": {
+            "Air Temperature": 33.62,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "13:00": {
+            "Air Temperature": 34.52,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "14:00": {
+            "Air Temperature": 38.480000000000004,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "15:00": {
+            "Air Temperature": 35.6,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "16:00": {
+            "Air Temperature": 35.96,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "17:00": {
+            "Air Temperature": 34.88,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "18:00": {
+            "Air Temperature": 35.42,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "19:00": {
+            "Air Temperature": 34.88,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "20:00": {
+            "Air Temperature": 35.78,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "21:00": {
+            "Air Temperature": 35.96,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "22:00": {
+            "Air Temperature": 37.22,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "23:00": {
+            "Air Temperature": 38.3,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        }
+    },
+    "04/16/2020": {
+        "00:00": {
+            "Air Temperature": 37.94,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "01:00": {
+            "Air Temperature": 37.76,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "02:00": {
+            "Air Temperature": 36.32,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "03:00": {
+            "Air Temperature": 34.7,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "04:00": {
+            "Air Temperature": 33.08,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "05:00": {
+            "Air Temperature": 32.18,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "06:00": {
+            "Air Temperature": 31.82,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "07:00": {
+            "Air Temperature": 32.72,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "08:00": {
+            "Air Temperature": 33.98,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "09:00": {
+            "Air Temperature": 36.32,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "10:00": {
+            "Air Temperature": 38.3,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "11:00": {
+            "Air Temperature": 40.1,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "12:00": {
+            "Air Temperature": 40.82,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "13:00": {
+            "Air Temperature": 43.879999999999995,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "14:00": {
+            "Air Temperature": 44.24,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "15:00": {
+            "Air Temperature": 46.04,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "16:00": {
+            "Air Temperature": 46.22,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "17:00": {
+            "Air Temperature": 46.58,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "18:00": {
+            "Air Temperature": 46.76,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "19:00": {
+            "Air Temperature": 46.04,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "20:00": {
+            "Air Temperature": 45.5,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "21:00": {
+            "Air Temperature": 45.5,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "22:00": {
+            "Air Temperature": 44.96,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "23:00": {
+            "Air Temperature": 45.32,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        }
+    },
+    "04/17/2020": {
+        "00:00": {
+            "Air Temperature": 44.96,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "01:00": {
+            "Air Temperature": 45.14,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "02:00": {
+            "Air Temperature": 42.8,
+            "Total Rain": 45.2,
+            "Precipitation Type": 0
+        },
+        "03:00": {
+            "Air Temperature": 37.04,
+            "Total Rain": 45.2,
+            "Precipitation Type": 60
+        },
+        "04:00": {
+            "Air Temperature": 34.88,
+            "Total Rain": 46.9,
+            "Precipitation Type": 60
+        },
+        "05:00": {
+            "Air Temperature": 34.7,
+            "Total Rain": 50.5,
+            "Precipitation Type": 60
+        },
+        "06:00": {
+            "Air Temperature": 34.88,
+            "Total Rain": 54.3,
+            "Precipitation Type": 60
+        },
+        "07:00": {
+            "Air Temperature": 34.7,
+            "Total Rain": 58.0,
+            "Precipitation Type": 60
+        },
+        "08:00": {
+            "Air Temperature": 34.88,
+            "Total Rain": 61.1,
+            "Precipitation Type": 60
+        },
+        "09:00": {
+            "Air Temperature": 35.6,
+            "Total Rain": 63.2,
+            "Precipitation Type": 60
+        },
+        "10:00": {
+            "Air Temperature": 35.6,
+            "Total Rain": 66.3,
+            "Precipitation Type": 60
+        },
+        "11:00": {
+            "Air Temperature": 35.78,
+            "Total Rain": 69.0,
+            "Precipitation Type": 60
+        },
+        "11:25": {
+            "Air Temperature": 4.8919999999999995,
+            "Total Rain": 0.0,
+            "Precipitation Type": 0
+        },
+        "12:00": {
+            "Air Temperature": 36.32,
+            "Total Rain": 69.5,
+            "Precipitation Type": 60
+        },
+        "13:00": {
+            "Air Temperature": 37.22,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "14:00": {
+            "Air Temperature": 37.76,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "15:00": {
+            "Air Temperature": 38.12,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "16:00": {
+            "Air Temperature": 37.94,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "17:00": {
+            "Air Temperature": 38.480000000000004,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "18:00": {
+            "Air Temperature": 40.28,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "19:00": {
+            "Air Temperature": 40.46,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "20:00": {
+            "Air Temperature": 42.44,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "21:00": {
+            "Air Temperature": 41.54,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "22:00": {
+            "Air Temperature": 41.0,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "23:00": {
+            "Air Temperature": 40.64,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        }
+    },
+    "04/18/2020": {
+        "00:00": {
+            "Air Temperature": 39.92,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "01:00": {
+            "Air Temperature": 39.38,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "02:00": {
+            "Air Temperature": 38.84,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "03:00": {
+            "Air Temperature": 37.94,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "04:00": {
+            "Air Temperature": 38.480000000000004,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "05:00": {
+            "Air Temperature": 38.84,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "06:00": {
+            "Air Temperature": 38.66,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "07:00": {
+            "Air Temperature": 38.3,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "08:00": {
+            "Air Temperature": 40.28,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "09:00": {
+            "Air Temperature": 43.34,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "10:00": {
+            "Air Temperature": 47.120000000000005,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "11:00": {
+            "Air Temperature": 50.36,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "12:00": {
+            "Air Temperature": 53.24,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "13:00": {
+            "Air Temperature": 55.22,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "14:00": {
+            "Air Temperature": 56.120000000000005,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "15:00": {
+            "Air Temperature": 57.74,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "16:00": {
+            "Air Temperature": 59.18,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "17:00": {
+            "Air Temperature": 59.0,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "18:00": {
+            "Air Temperature": 58.46,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "20:00": {
+            "Air Temperature": 56.84,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "21:00": {
+            "Air Temperature": 55.040000000000006,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "22:00": {
+            "Air Temperature": 53.78,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        },
+        "23:00": {
+            "Air Temperature": 52.519999999999996,
+            "Total Rain": 69.5,
+            "Precipitation Type": 0
+        }
+    }
+}
