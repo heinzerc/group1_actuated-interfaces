@@ -2,25 +2,29 @@
 void keyPressed() {
 
   switch(key) {
+    case '0': 
+    //basic motor control w/ duration, specification found at:
+    //https://toio.github.io/toio-spec/en/docs/ble_motor/#motor-control-with-specified-duration
+    //can use negative numbers to move toio backwards
+    // void motor(int leftSpeed, int rightSpeed, int duration)
+    
+    println(cubes[0].getX(), cubes[0].getY(), cubes[0].getTheta());
+    println(cubes[1].getX(), cubes[1].getY(), cubes[1].getTheta());
+    println(cubes[2].getX(), cubes[2].getY(), cubes[2].getTheta());
+    println(cubes[3].getX(), cubes[3].getY(), cubes[3].getTheta());
+    println(cubes[4].getX(), cubes[4].getY(), cubes[4].getTheta());
+    println(cubes[5].getX(), cubes[5].getY(), cubes[5].getTheta());
+    println(cubes[6].getX(), cubes[6].getY(), cubes[6].getTheta());
+    println(cubes[7].getX(), cubes[7].getY(), cubes[7].getTheta());
+
+    break;
+    
     case '1': //Chicago csv data
       table = loadTable("Chicago.csv", "header");
       currentRow = 0; // Reset to the first row
       redraw(); // Update the display
       break;
-      
-    ////basic motor control w/ duration, specification found at:
-    ////https://toio.github.io/toio-spec/en/docs/ble_motor/#motor-control-with-specified-duration
-    ////can use negative numbers to move toio backwards
-    //// void motor(int leftSpeed, int rightSpeed, int duration)
-
-    //println(cubes[0].getX(), cubes[0].getY(), cubes[0].getTheta());
-    //println(cubes[1].getX(), cubes[1].getY(), cubes[1].getTheta());
-    //println(cubes[2].getX(), cubes[2].getY(), cubes[2].getTheta());
-    //println(cubes[3].getX(), cubes[3].getY(), cubes[3].getTheta());
-    //println(cubes[4].getX(), cubes[4].getY(), cubes[4].getTheta());
-    //println(cubes[5].getX(), cubes[5].getY(), cubes[5].getTheta());
-
-    //break;
+  
 
     case '2': //Dallas csv data
       table = loadTable("Dallas.csv", "header");
@@ -105,19 +109,19 @@ void keyPressed() {
   }
 }
 
-//execute code when mouse is pressed
-void mousePressed() {
-  if (mouseX > 45 && mouseX < matDimension[2] - xOffset && mouseY > 45 && mouseY < matDimension[2] - yOffset) {
-    cubes[0].target(mouseX, mouseY, 0);
-  }
+////execute code when mouse is pressed
+//void mousePressed() {
+//  if (mouseX > 45 && mouseX < matDimension[2] - xOffset && mouseY > 45 && mouseY < matDimension[2] - yOffset) {
+//    cubes[0].target(mouseX, mouseY, 0);
+//  }
 
-  //insert code here;
-}
+//  //insert code here;
+//}
 
-//execute code when mouse is released
-void mouseReleased() {
-  //insert code here;
-}
+////execute code when mouse is released
+//void mouseReleased() {
+//  //insert code here;
+//}
 
 //execute code when button on toio is pressed
 void buttonDown(int id) {
@@ -301,13 +305,15 @@ void rainWind(){
    int[][] rainWTargets3={{292,201,75},{292,201,105}};
    int[][] rainWTargets4={{294,257,75},{294,257,105}};
    int[][] rainWTargets5={{255,298,75},{255,298,105}};
-   for(int i=0;i<6;i++){
-   cubes[0].multiTarget(0,rainWTargets0);  
-   cubes[1].multiTarget(0,rainWTargets1);
-   cubes[2].multiTarget(0,rainWTargets2);
-   cubes[3].multiTarget(0,rainWTargets3);
-   cubes[4].multiTarget(0,rainWTargets4);
-   cubes[5].multiTarget(0,rainWTargets5);
+   
+   for(int i=0;i<15;i++){
+     cubes[0].multiTarget(0,rainWTargets0);  
+     cubes[1].multiTarget(0,rainWTargets1);
+     cubes[2].multiTarget(0,rainWTargets2);
+     cubes[3].multiTarget(0,rainWTargets3);
+     cubes[4].multiTarget(0,rainWTargets4);
+     cubes[5].multiTarget(0,rainWTargets5);
+     delay(500);
    }
 }
   
