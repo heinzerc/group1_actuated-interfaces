@@ -286,26 +286,7 @@ void rain(){ //sets toios to rain icon,
 }
 
 void rainWind(){
-    int[][] rainTargets0={{178,371,320},{203,270,90}};
-   int[][] rainTargets1={{128,223,1},{203,202,90}};
-   int[][] rainTargets2={{251,81,274},{256,165,90}};
-   int[][] rainTargets3={{367,124,122},{292,201,90}};
-   int[][] rainTargets4={{410,248,180},{294,257,90}};
-   int[][] rainTargets5={{368,354,222},{255,298,90}};
-   
-    cubes[0].multiTarget(0,rainTargets0);
-    cubes[1].multiTarget(0,rainTargets1);
-    cubes[2].multiTarget(0,rainTargets2);
-    cubes[3].multiTarget(0,rainTargets3);
-    cubes[4].multiTarget(0,rainTargets4);
-    cubes[5].multiTarget(0,rainTargets5);
-    
-    cubes[0].led(0, 0, 0, 255);
-    cubes[1].led(0, 0, 0, 255);
-    cubes[2].led(0, 0, 0, 255);
-    cubes[3].led(0, 0, 0, 255);
-    cubes[4].led(0, 0, 0, 255);
-    cubes[5].led(0, 0, 0, 255);
+    rain();
     
    // cubes[7].target(cubes[7].x, 250, 0); 
 
@@ -314,17 +295,19 @@ void rainWind(){
     
     delay(1500);
     
-   int[][] rainWTargets0={{203,300,90},{203,270,90}};
-   int[][] rainWTargets1={{203,232,90},{203,202,90}};
-   int[][] rainWTargets2={{256,195,90},{256,165,90}};
-   int[][] rainWTargets3={{292,231,90},{292,201,90}};
-   int[][] rainWTargets4={{294,287,90},{294,257,90}};
-   int[][] rainWTargets5={{255,328,90},{255,298,90}};
+   int[][] rainWTargets0={{203,270,75},{203,270,105}};
+   int[][] rainWTargets1={{203,202,75},{203,202,105}};
+   int[][] rainWTargets2={{256,165,75},{256,165,105}};
+   int[][] rainWTargets3={{292,201,75},{292,201,105}};
+   int[][] rainWTargets4={{294,257,75},{294,257,105}};
+   int[][] rainWTargets5={{255,298,75},{255,298,105}};
+   for(int i=0;i<6;i++){
    cubes[0].multiTarget(0,rainWTargets0);  
    cubes[1].multiTarget(0,rainWTargets1);
    cubes[2].multiTarget(0,rainWTargets2);
    cubes[3].multiTarget(0,rainWTargets3);
    cubes[4].multiTarget(0,rainWTargets4);
    cubes[5].multiTarget(0,rainWTargets5);
+   }
 }
   
