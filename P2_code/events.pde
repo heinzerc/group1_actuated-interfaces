@@ -129,7 +129,7 @@ void buttonDown(int id) {
   
   int city = closestCity(cubes[7].x, cubes[7].y);
   if (id != 7){
-    break;
+    //do nothing
   }
   else if (city == 1){ // LA
     table = loadTable("LA.csv", "header");
