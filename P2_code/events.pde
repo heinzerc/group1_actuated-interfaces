@@ -95,6 +95,10 @@ void keyPressed() {
     //int[][] notes = {{30, 64, 20}, {30, 63, 20}, {30, 64, 20}, {30, 63, 20}, {30, 64, 20}, {30, 63, 20}, {30, 59, 20}, {30, 62, 20}, {30, 60, 20}, {30, 57, 20}};
     //cubes[0].midi(1, notes);
     //break;
+    
+   case '9': //rainWind()
+     rainWind();
+     break;
 
     default: //is this necessary?
     break; //is this necessary?
