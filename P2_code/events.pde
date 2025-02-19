@@ -2,77 +2,102 @@
 void keyPressed() {
 
   switch(key) {
-  case '1': //raw motor control
+    case '1': //Chicago csv data
+      table = loadTable("Chicago.csv", "header");
+      currentRow = 0; // Reset to the first row
+      redraw(); // Update the display
+      break;
+      
+    ////basic motor control w/ duration, specification found at:
+    ////https://toio.github.io/toio-spec/en/docs/ble_motor/#motor-control-with-specified-duration
+    ////can use negative numbers to move toio backwards
+    //// void motor(int leftSpeed, int rightSpeed, int duration)
 
-    //basic motor control w/ duration, specification found at:
-    //https://toio.github.io/toio-spec/en/docs/ble_motor/#motor-control-with-specified-duration
-    //can use negative numbers to move toio backwards
-    // void motor(int leftSpeed, int rightSpeed, int duration)
+    //println(cubes[0].getX(), cubes[0].getY(), cubes[0].getTheta());
+    //println(cubes[1].getX(), cubes[1].getY(), cubes[1].getTheta());
+    //println(cubes[2].getX(), cubes[2].getY(), cubes[2].getTheta());
+    //println(cubes[3].getX(), cubes[3].getY(), cubes[3].getTheta());
+    //println(cubes[4].getX(), cubes[4].getY(), cubes[4].getTheta());
+    //println(cubes[5].getX(), cubes[5].getY(), cubes[5].getTheta());
 
-    println(cubes[0].getX(), cubes[0].getY(), cubes[0].getTheta());
-    println(cubes[1].getX(), cubes[1].getY(), cubes[1].getTheta());
-    println(cubes[2].getX(), cubes[2].getY(), cubes[2].getTheta());
-    println(cubes[3].getX(), cubes[3].getY(), cubes[3].getTheta());
-    println(cubes[4].getX(), cubes[4].getY(), cubes[4].getTheta());
-    println(cubes[5].getX(), cubes[5].getY(), cubes[5].getTheta());
+    //break;
 
-    
-    break;
+    case '2': //Dallas csv data
+      table = loadTable("Dallas.csv", "header");
+      currentRow = 0;
+      redraw();
+      break;
 
-  case '2': //Sun code at bottom of this file
-   
-    sun();
-    
-    break;
-
-  case '3': //multi-targeting control
-
+    case '3': //LA csv data
+      table = loadTable("LA.csv", "header");
+      currentRow = 0;
+      redraw();
+      break;
+    //multi-targeting control
     //motor control with multiple targets specified (simplified), specification found at:
     //https://toio.github.io/toio-spec/en/docs/ble_motor/#motor-control-with-multiple-targets-specified
     //targets should be formatted as {x, y, theta} or {x, y}. Unless specified, theta = 0
     // void multiTarget(int mode, int[][] targets)
 
-
-
-  case '4': // This is the code for the snow icon. It also plays the song and 
-  
-    snow();
-    break;
-   
-
-  case '5': //wind
-  
-   wind();
-    break;
-  
-  case '6': // rain
-
-    //play sound effects, specification can be found at:
-    //https://toio.github.io/toio-spec/en/docs/ble_sound
-    // sound(int soundeffect, int volume) {
+    case '4': // NYC csv data
+      table = loadTable("NYC.csv", "header");
+      currentRow = 0;
+      redraw();
+      break;
+     
+    case ' ': // Use spacebar to toggle rows of CSV data
+      currentRow = (currentRow + 1) % table.getRowCount();
+      redraw(); // Call draw() to update the display
+      break;
       
-    rain();
-    break;
-  case '7': // Single Midi Tone
+    // Keystone calibration controls
+    case 'c':
+      ks.toggleCalibration();
+      break;
+    case 'l':
+      ks.load();
+      break;
+    case 's':
+      ks.save();
+      break;
 
+    case '5': //wind
+  
+      wind();
+      break;
+  
+    case '6': //rain
+      rain();
+      break;
+      
+      //play sound effects, specification can be found at:
+      //https://toio.github.io/toio-spec/en/docs/ble_sound
+      // sound(int soundeffect, int volume) {
+      
+    case '7': //snow
+      snow();
+      break;
+    // Single Midi Tone
     //play Midi Note (single), specification can be found at:
     //https://toio.github.io/toio-spec/en/docs/ble_sound/#playing-the-midi-note-numbers
     // void midi(int duration, int noteID, int volume)
-    cubes[0].midi(10, 69, 255);
+    //cubes[0].midi(10, 69, 255);
+    //break;
+
+  case '8': //sun
+    sun(); //Sun code at bottom of this file
     break;
-
-  case '8': // Sequencial Midi Tones
-
+    //Sequencial Midi Tones
     //play Midi Notes (sequence), specification can be found at:
     //https://toio.github.io/toio-spec/en/docs/ble_sound/#playing-the-midi-note-numbers
     //targets should be formatted as {duration, noteID, volume} or {duration, noteID}. Unless specified, volume = 255
-    // void midi(int repetitions, int[][] notes)
-    int[][] notes = {{30, 64, 20}, {30, 63, 20}, {30, 64, 20}, {30, 63, 20}, {30, 64, 20}, {30, 63, 20}, {30, 59, 20}, {30, 62, 20}, {30, 60, 20}, {30, 57, 20}};
-    cubes[0].midi(1, notes);
-    break;
+    //// void midi(int repetitions, int[][] notes)
+    //int[][] notes = {{30, 64, 20}, {30, 63, 20}, {30, 64, 20}, {30, 63, 20}, {30, 64, 20}, {30, 63, 20}, {30, 59, 20}, {30, 62, 20}, {30, 60, 20}, {30, 57, 20}};
+    //cubes[0].midi(1, notes);
+    //break;
 
-  default:
-    break;
+    default: //is this necessary?
+    break; //is this necessary?
   }
 }
 
