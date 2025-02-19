@@ -126,12 +126,37 @@ void keyPressed() {
 //execute code when button on toio is pressed
 void buttonDown(int id) {
   println("Button Pressed!");
+  
+  int city = closestCity(cubes[7].x, cubes[7].y);
+  if (id != 7){
+    break;
+  }
+  else if (city == 1){ // LA
+    table = loadTable("LA.csv", "header");
+    currentRow = 0;
+    redraw();
+  }
+  else if (city == 2){ // Dallas
+    table = loadTable("Dallas.csv", "header");
+    currentRow = 0;
+    redraw();
+  }
+  else if (city == 3){ // Chicago
+    table = loadTable("Chicago.csv", "header");
+    currentRow = 0; // Reset to the first row
+    redraw(); // Update the display
+  }
+  else if (city == 4){ // NYC
+    table = loadTable("NYC.csv", "header");
+    currentRow = 0;
+    redraw();
+  }
 }
 
 //execute code when button on toio is released
 void buttonUp(int id) {
   println("Button Released!");
-
+  
   //delay(100);
 }
 
@@ -315,5 +340,29 @@ void rainWind(){
      cubes[5].multiTarget(0,rainWTargets5);
      delay(500);
    }
+   
+   int closestCity(int x, int y){
+     float laDist = sqrt(sq(x - 87) + sq(y - 265));
+     float dallasDist = sqrt(sq(x - 248) + sq(y - 319));
+     float chicagoDist = sqrt(sq(x - 4) + sq(y - 188));
+     float nycDist = sqrt(sq(x - 405) + sq(y - 186));
+     
+     float minimum = min(laDist, dallasDist, chicagoDist, nycDist);
+     
+     if (minimum == laDist){ // Los angeles
+       return 1;
+     }
+     if (minimum == dallasDist){ // dallas
+       return 2;
+     }
+     if (minimum == chicagoDist){ // chicago
+       return 3;
+     }
+     if (minimum == nycDist){ // nyc
+       return 4;
+     }
+     
+   }
+   
 }
   
