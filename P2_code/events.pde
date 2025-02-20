@@ -132,18 +132,22 @@ void buttonDown(int id) {
     if (city == 1){ // LA
       table = loadTable("LA.csv", "header");
       redraw();
+      callWeather();
     }
     if (city == 2){ // Dallas
       table = loadTable("Dallas.csv", "header");
       redraw();
+      callWeather();
     }
     if (city == 3){ // Chicago
       table = loadTable("Chicago.csv", "header");
       redraw(); // Update the display
+      callWeather();
     }
     if (city == 4){ // NYC
       table = loadTable("NYC.csv", "header");
       redraw();
+      callWeather();
     }
   }
   
@@ -152,7 +156,28 @@ void buttonDown(int id) {
     if (day != 0){
       currentRow = day - 1;
       redraw();
+      callWeather();
     }
+  }
+  
+}
+
+void callWeather(){
+  TableRow row = table.getRow(currentRow);
+  if (row.getString("icon").equals("rainy")) {
+    rain();
+  }
+  if (row.getString("icon").equals("sunny")) {
+    sun();
+  }
+  if (row.getString("icon").equals("windyrainy")) {
+    rainWind();
+  }
+  if (row.getString("icon").equals("windysunny")) {
+    wind();
+  }
+  if (row.getString("icon").equals("snowy")) {
+    snow();
   }
   
 }
