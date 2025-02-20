@@ -174,10 +174,10 @@ void shake(int id, int shake){
 }
 
 //execute code when toio detects double tap
-void doubleTap(int id) {
+//void doubleTap(int id) {
   //int[][] ZeroCirc={{250,185,0},{320, ,90},{250,315,180},{180,250 , 270}};
   //int[][] OneCirc={{250,315,0},{180,315,90},{250,185,180},{320,250,270}};
-  println("Double Tap Detected!");
+//  println("Double Tap Detected!");
   //cubes[0].multiTarget(0, ZeroCirc);
   //cubes[1].multiTarget(0,OneCirc);
   
@@ -196,7 +196,7 @@ void doubleTap(int id) {
   //cubes[1].target (320,250,270);
   //delay(1000);
   //}
-}
+//}
 
 //Weather icons: We can also change these to have variables (ex, the direction for wind, or an offset or something for x or y
 
@@ -307,8 +307,6 @@ void rain(){ //sets toios to rain icon,
     cubes[5].led(0, 0, 0, 255);
     
    // cubes[7].target(cubes[7].x, 250, 0); 
-
-  
 
     int[][] fallNotes = {{30, 64, 20}, {30, 64, 20}, {30, 64, 20}, {30, 65, 20}, {60, 64, 20}, {30, 64, 20}, {30, 65, 20}, {30, 64, 20}, {15, 62, 20}, {15, 64, 20}, {30, 65, 20}, {30, 64, 20}, {60, 62, 20}};
     cubes[0].midi(1, fallNotes);
