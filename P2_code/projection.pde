@@ -170,15 +170,16 @@ void draw() {
     offscreen1.textAlign(CENTER);
     offscreen1.text(city, 205, 30);
     // date
-    offscreen1.textSize(12);
+    offscreen1.textSize(16);
     offscreen1.textAlign(LEFT);
-    offscreen1.text(dayoftheweek, 15, 35);
-    offscreen1.text(date, 15, 20);
+    offscreen1.text(dayoftheweek, 10, 45);
+    offscreen1.text(date, 10, 25);
     // temperature
     offscreen1.textSize(16);
     offscreen1.text("Hi: " + highTemp + "°F", 20, 215);
     offscreen1.text("Lo: " + lowTemp + "°F", 20, 230);
-    offscreen1.text("Conditions:  " + icon, 250, 230);
+    offscreen1.textAlign(RIGHT);
+    offscreen1.text("Conditions:  " + icon, 375, 230);
     
     // For day of the week slider
     offscreen1.text("Su", 40, 270);
