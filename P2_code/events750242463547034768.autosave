@@ -127,34 +127,30 @@ void keyPressed() {
 void buttonDown(int id) {
   println("Button Pressed!");
   
-  if (id == 7){
-    int city = closestCity(cubes[7].x, cubes[7].y);
-    if (city == 1){ // LA
-      table = loadTable("LA.csv", "header");
-      redraw();
-    }
-    if (city == 2){ // Dallas
-      table = loadTable("Dallas.csv", "header");
-      redraw();
-    }
-    if (city == 3){ // Chicago
-      table = loadTable("Chicago.csv", "header");
-      redraw(); // Update the display
-    }
-    if (city == 4){ // NYC
-      table = loadTable("NYC.csv", "header");
-      redraw();
-    }
+  int city = closestCity(cubes[7].x, cubes[7].y);
+  if (id != 7){
+    break;
   }
-  
-  if (id == 6){
-    int day = closestDay(cubes[6].x);
-    if (day != 0){
-      currentRow = day - 1;
-      redraw();
-    }
+  else if (city == 1){ // LA
+    table = loadTable("LA.csv", "header");
+    currentRow = 0;
+    redraw();
   }
-  
+  else if (city == 2){ // Dallas
+    table = loadTable("Dallas.csv", "header");
+    currentRow = 0;
+    redraw();
+  }
+  else if (city == 3){ // Chicago
+    table = loadTable("Chicago.csv", "header");
+    currentRow = 0; // Reset to the first row
+    redraw(); // Update the display
+  }
+  else if (city == 4){ // NYC
+    table = loadTable("NYC.csv", "header");
+    currentRow = 0;
+    redraw();
+  }
 }
 
 //execute code when button on toio is released
@@ -178,10 +174,10 @@ void shake(int id, int shake){
 }
 
 //execute code when toio detects double tap
-//void doubleTap(int id) {
+void doubleTap(int id) {
   //int[][] ZeroCirc={{250,185,0},{320, ,90},{250,315,180},{180,250 , 270}};
   //int[][] OneCirc={{250,315,0},{180,315,90},{250,185,180},{320,250,270}};
-//  println("Double Tap Detected!");
+  println("Double Tap Detected!");
   //cubes[0].multiTarget(0, ZeroCirc);
   //cubes[1].multiTarget(0,OneCirc);
   
@@ -200,7 +196,7 @@ void shake(int id, int shake){
   //cubes[1].target (320,250,270);
   //delay(1000);
   //}
-//}
+}
 
 //Weather icons: We can also change these to have variables (ex, the direction for wind, or an offset or something for x or y
 
@@ -220,29 +216,12 @@ void sun(){
     cubes[4].multiTarget(0,targets4);
     cubes[5].multiTarget(0,targets5);
     
-   int[][] sunWiggle0={{241,292,309},{241, 292, 294}};
-   int[][] sunWiggle1={{220,252,20},{220, 252, 5}};
-   int[][] sunWiggle2={{245,214,73},{245, 214, 58}};
-   int[][] sunWiggle3={{286,212,120},{286, 212, 105}};
-   int[][] sunWiggle4={{314,251,196},{314, 251, 181}};
-   int[][] sunWiggle5={{286,285,269},{286, 285, 244}};
-   
-   
     cubes[0].led(0, 244, 88, 15);
     cubes[1].led(0, 244, 88, 15);
     cubes[2].led(0, 244, 88, 15);
     cubes[3].led(0, 244, 88, 15);
     cubes[4].led(0, 244, 88, 15);
     cubes[5].led(0, 244, 88, 15);
-    
-    for(int i=0;i<15;i++){
-      cubes[0].multiTarget(0,sunWiggle0);
-      cubes[1].multiTarget(0,sunWiggle1);
-      cubes[2].multiTarget(0,sunWiggle2);
-      cubes[3].multiTarget(0,sunWiggle3);
-      cubes[4].multiTarget(0,sunWiggle4);
-      cubes[5].multiTarget(0,sunWiggle5);
-   }
     
     //cubes[7].target(cubes[7].x, 150, 0);
     
@@ -306,7 +285,7 @@ void wind(){
     cubes[0].midi(1, summerNotes);}
     
 void rain(){ //sets toios to rain icon, 
-   int[][] rainTargets0={{178,371,320},{203,270,90}};
+  int[][] rainTargets0={{178,371,320},{203,270,90}};
    int[][] rainTargets1={{128,223,1},{203,202,90}};
    int[][] rainTargets2={{251,81,274},{256,165,90}};
    int[][] rainTargets3={{367,124,122},{292,201,90}};
@@ -328,6 +307,8 @@ void rain(){ //sets toios to rain icon,
     cubes[5].led(0, 0, 0, 255);
     
    // cubes[7].target(cubes[7].x, 250, 0); 
+
+  
 
     int[][] fallNotes = {{30, 64, 20}, {30, 64, 20}, {30, 64, 20}, {30, 65, 20}, {60, 64, 20}, {30, 64, 20}, {30, 65, 20}, {30, 64, 20}, {15, 62, 20}, {15, 64, 20}, {30, 65, 20}, {30, 64, 20}, {60, 62, 20}};
     cubes[0].midi(1, fallNotes);
@@ -361,71 +342,28 @@ void rainWind(){
    }
 }
    
-int closestCity(int x, int y){
-   float laDist = sqrt(sq(x - 87) + sq(y - 265));
-   float dallasDist = sqrt(sq(x - 248) + sq(y - 319));
-   float chicagoDist = sqrt(sq(x - 294) + sq(y - 183));
-   float nycDist = sqrt(sq(x - 405) + sq(y - 186));
-   
-   float[] floats = {laDist, dallasDist, chicagoDist, nycDist};
-   
-   float minimum = min(floats);
-   
-   if (minimum == laDist){ // Los angeles
-     return 1;
-   }
-   else if (minimum == dallasDist){ // dallas
-     return 2;
-   }
-   else if (minimum == chicagoDist){ // chicago
-     return 3;
-   }
-   else if (minimum == nycDist){ // nyc
-     return 4;
-   }
-   else {
-     return 0;
-   }
+   int closestCity(int x, int y){
+     float laDist = sqrt(sq(x - 87) + sq(y - 265));
+     float dallasDist = sqrt(sq(x - 248) + sq(y - 319));
+     float chicagoDist = sqrt(sq(x - 4) + sq(y - 188));
+     float nycDist = sqrt(sq(x - 405) + sq(y - 186));
      
+     float minimum = min(laDist, dallasDist, chicagoDist, nycDist);
      
+     if (minimum == laDist){ // Los angeles
+       return int(1);
+     }
+     if (minimum == dallasDist){ // dallas
+       return int(2);
+     }
+     if (minimum == chicagoDist){ // chicago
+       return int(3);
+     }
+     if (minimum == nycDist){ // nyc
+       return int(4);
+     }
+     
+   
    
 }
-int closestDay(int x){ // locations in order from sun: 99 146 201 247 300 343 399
-   int sunDist = abs(99 - x);
-   int monDist = abs(146 - x);
-   int tuesDist = abs(201 - x);
-   int wedDist = abs(247 - x);
-   int thursDist = abs(300 - x);
-   int friDist = abs(343 - x);
-   int satDist = abs(399 - x);
-   
-   int[] ints = {sunDist, monDist, tuesDist, wedDist, thursDist, friDist, satDist};
-   
-   int minimum = min(ints);
-   
-   if (minimum == sunDist){ // Sun
-     return 1;
-   }
-   else if (minimum == monDist){ // Mon
-     return 2;
-   }
-   else if (minimum == tuesDist){ // Tues
-     return 3;
-   }
-   else if (minimum == wedDist){ // Wed
-     return 4;
-   }
-   else if (minimum == thursDist){ // Thurs
-     return 5;
-   }
-   else if (minimum == friDist){ // Fri
-     return 6;
-   }
-   else if (minimum == satDist){ // Sat
-     return 7;
-   }
-   else {
-     return 0;
-   }
-     
-}
+  
