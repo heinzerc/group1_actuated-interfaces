@@ -41,7 +41,6 @@ int framerate = 30;
 
 int[] matDimension = {45, 45, 455, 455};
 
-
 //for OSC
 OscP5 oscP5;
 //where to send the commands to
@@ -82,8 +81,8 @@ void setup() {
   
   // Load weather images into the array
   weather_images = new PImage[5]; // Change the size to the number of images you have
-  weather_images[0] = loadImage("sun.gif"); // Replace with your image file names
-  weather_images[1] = loadImage("wind.gif");
+  weather_images[0] = loadImage("sun.png"); // Replace with your image file names
+  weather_images[1] = loadImage("wind.jpg");
   weather_images[2] = loadImage("rain.gif");
   weather_images[3] = loadImage("windrain.gif");
   weather_images[4] = loadImage("snow.gif");
@@ -143,12 +142,26 @@ void draw() {
   
   // Draw weather image
   if (weather_images[weather_currentImageIndex] != null) {
-      offscreen1.image(
-        weather_images[weather_currentImageIndex],
-        0, 0,
-        400, 240); // weather image width and height, gives space for day of the week
-    }
+    offscreen1.image(weather_images[weather_currentImageIndex], 0, 0);
+  }
   
+  // Add white rectangles behind the text for readability
+  offscreen1.fill(255); // White color for the rectangle
+  offscreen1.noStroke(); // No border for the rectangle
+  
+  // Rectangle for city
+  offscreen1.rect(135, 11, 145, 25); // Adjust position and size as needed
+  
+  // Rectangle for date
+  offscreen1.rect(5, 0, 90, 35); // x, y, width, height
+  
+  // Rectangle for temperature
+  offscreen1.rect(290, 0, 75, 35); // x, y, width, height
+  
+  // Rectangle for day of the week slider
+  offscreen1.rect(15, 250, 340, 30);
+  
+  // Draw text on top of the white rectangles
   offscreen1.fill(0); // Black text
   offscreen1.textSize(16);
   
@@ -159,9 +172,8 @@ void draw() {
     // Extract data from the current row
     String dayoftheweek = row.getString("dayoftheweek");
     String date = row.getString("datetime");
-    float highTemp = row.getFloat("tempmax");
-    float lowTemp = row.getFloat("tempmin");
-    String icon = row.getString("icon");
+    int highTemp = (int) row.getFloat("tempmax");
+    int lowTemp = (int) row.getFloat("tempmin"); //casting as int
     String city = row.getString("name");
 
     // Display the data on the surface of offscreen1
@@ -176,10 +188,9 @@ void draw() {
     offscreen1.text(date, 10, 15);
     // temperature
     offscreen1.textSize(16);
-    offscreen1.text("Hi: " + highTemp + "°F", 20, 215);
-    offscreen1.text("Lo: " + lowTemp + "°F", 20, 230);
+    offscreen1.text("Hi: " + highTemp + "°F", 300, 15);
+    offscreen1.text("Lo: " + lowTemp + "°F", 300, 30);
     offscreen1.textAlign(RIGHT);
-    //offscreen1.text("Conditions:  " + icon, 375, 230);
     
     // For day of the week slider
     offscreen1.text("Su", 40, 270);
@@ -189,11 +200,10 @@ void draw() {
     offscreen1.text("Th", 240, 270);
     offscreen1.text("F", 290, 270);
     offscreen1.text("Sa", 340, 270);
-    } 
-    else {
-      offscreen1.text("End of data reached.", 50, 50);
-    }
-    
+  } else {
+    offscreen1.text("End of data reached.", 50, 50);
+  }
+  
   offscreen1.endDraw();
 
   // Draw the map onto offscreen2 buffer
@@ -208,79 +218,7 @@ void draw() {
   // Clear the main screen with a black background
   background(0);
  
-  // render the scenes, transformed using the corner pin surfaces
+  // Render the scenes
   surface1.render(offscreen1);
   surface2.render(offscreen2);
-  
-  //commenting out template view
-  //START TEMPLATE/DEBUG VIEW
-  //background(255);
-  //stroke(0);
-  //long now = System.currentTimeMillis();
-
-  ////draw the "mat"
-  //fill(255);
-  //rect(matDimension[0] - xOffset, matDimension[1] - yOffset, matDimension[2] - matDimension[0], matDimension[3] - matDimension[1]);
-
-  ////draw the cubes
-  //pushMatrix();
-  //translate(xOffset, yOffset);
-  
-  //for (int i = 0; i < nCubes; i++) {
-  //  cubes[i].checkActive(now);
-    
-  //  if (cubes[i].isActive) {
-  //    pushMatrix();
-  //    translate(cubes[i].x, cubes[i].y);
-  //    fill(0);
-  //    textSize(15);
-  //    text(i, 0, -20);
-  //    noFill();
-  //    rotate(cubes[i].theta * PI/180);
-  //    rect(-10, -10, 20, 20);
-  //    line(0, 0, 20, 0);
-  //    popMatrix();
-  //  }
-  //}
-  //popMatrix();
-  //END TEMPLATE/DEBUG VIEW
-  
-  //INSERT YOUR CODE HERE!
-  // What is this? LED colors? Can we move this into events, or label for organization?
-    //if (counter==100){
-    //if (45 <= cubes[6].x && cubes[6].x <= 100)
-    //{
-    //  cubes[6].led(100, 255, 255, 255);
-    //}
-    //else if (101 <= cubes[6].x && cubes[6].x <= 140)
-    //{
-    //  cubes[6].led(100, 255, 0, 0);
-    //}
-    //else if (141 <= cubes[6].x && cubes[6].x <= 180)
-    //{
-    //  cubes[6].led(100, 0, 255, 0);
-    //}
-    //else if (181 <= cubes[6].x && cubes[6].x <= 220)
-    //{
-    //  cubes[6].led(100, 0, 0, 255);
-    //}
-    //else if (221 <= cubes[6].x && cubes[6].x <= 260)
-    //{
-    //  cubes[6].led(100, 255, 255, 0);
-    //}
-    //else if (261 <= cubes[6].x && cubes[6].x <= 300)
-    //{
-    //  cubes[6].led(100, 0, 255, 255);
-    //}
-    //else if (301 <= cubes[6].x && cubes[6].x <= 340)
-    //{
-    //  cubes[6].led(100, 255, 0, 255);
-    //}
-    //else if (341 <= cubes[6].x && cubes[6].x <= 455)
-    //{
-    //  cubes[6].led(100, 0, 0, 0);
-    //} 
-    //counter=0;
-    //}
-    //counter++;
 }

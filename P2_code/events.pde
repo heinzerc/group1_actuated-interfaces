@@ -54,6 +54,11 @@ void keyPressed() {
       redraw(); // Call draw() to update the display
       break;
       
+    case '-': // toggle weather images
+      weather_currentImageIndex = weather_currentImageIndex + 1;
+      redraw(); // Call draw() to update the display
+      break;
+      
     // Keystone calibration controls
     case 'c':
       ks.toggleCalibration();
@@ -104,8 +109,8 @@ void keyPressed() {
      rainWind();
      break;
 
-    default: //is this necessary?
-    break; //is this necessary?
+    default:
+    break;
   }
 }
 
@@ -306,8 +311,8 @@ void snow(){
 }
 
 void wind(){
-      weather_currentImageIndex = 1;
-int[][] windTargets0={{178,371,320},{187,302,180}};
+   weather_currentImageIndex = 1;
+   int[][] windTargets0={{178,371,320},{187,302,180}};
    int[][] windTargets1={{128,223,1},{187,236,180}};
    int[][] windTargets2={{251,81,274},{190,182,180}};
    int[][] windTargets3={{367,124,122},{250,203,180}};
