@@ -230,6 +230,7 @@ void shake(int id, int shake){
 //Weather icons: We can also change these to have variables (ex, the direction for wind, or an offset or something for x or y
 
 void sun(){ 
+   weather_currentImageIndex = 0;
    int[][] targets0={{178,371,320},{241, 292, 294}};
    int[][] targets1={{128,223,1},{220, 252, 5}};
    int[][] targets2={{177,158,26},{245, 214, 58}};
@@ -276,7 +277,8 @@ void sun(){
 }
 
 void snow(){
-  int[][] snowTargets0={{178,371,320},{262, 299, 120}};
+   weather_currentImageIndex = 4;  
+   int[][] snowTargets0={{178,371,320},{262, 299, 120}};
    int[][] snowTargets1={{128,223,1},{230, 248, 182}};
    int[][] snowTargets2={{177,158,26},{262, 201, 238}};
    int[][] snowTargets3={{367,124,122},{321, 199, 313}};
@@ -304,7 +306,8 @@ void snow(){
 }
 
 void wind(){
-  int[][] windTargets0={{178,371,320},{187,302,180}};
+      weather_currentImageIndex = 1;
+int[][] windTargets0={{178,371,320},{187,302,180}};
    int[][] windTargets1={{128,223,1},{187,236,180}};
    int[][] windTargets2={{251,81,274},{190,182,180}};
    int[][] windTargets3={{367,124,122},{250,203,180}};
@@ -331,6 +334,7 @@ void wind(){
     cubes[0].midi(1, summerNotes);}
     
 void rain(){ //sets toios to rain icon, 
+    weather_currentImageIndex = 2;
    int[][] rainTargets0={{178,371,320},{203,270,90}};
    int[][] rainTargets1={{128,223,1},{203,202,90}};
    int[][] rainTargets2={{251,81,274},{256,165,90}};
@@ -360,7 +364,7 @@ void rain(){ //sets toios to rain icon,
 
 void rainWind(){
     rain();
-    
+    weather_currentImageIndex = 3;
    // cubes[7].target(cubes[7].x, 250, 0); 
 
     int[][] fallNotes = {{30, 64, 20}, {30, 64, 20}, {30, 64, 20}, {30, 65, 20}, {60, 64, 20}, {30, 64, 20}, {30, 65, 20}, {30, 64, 20}, {15, 62, 20}, {15, 64, 20}, {30, 65, 20}, {30, 64, 20}, {60, 62, 20}};
