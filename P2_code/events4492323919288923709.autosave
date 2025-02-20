@@ -227,22 +227,20 @@ void sun(){
    int[][] sunWiggle4={{314,251,196},{314, 251, 181}};
    int[][] sunWiggle5={{286,285,269},{286, 285, 244}};
    
-   
-    cubes[0].led(0, 244, 88, 15);
-    cubes[1].led(0, 244, 88, 15);
-    cubes[2].led(0, 244, 88, 15);
-    cubes[3].led(0, 244, 88, 15);
-    cubes[4].led(0, 244, 88, 15);
-    cubes[5].led(0, 244, 88, 15);
-    
-    for(int i=0;i<15;i++){
       cubes[0].multiTarget(0,sunWiggle0);
       cubes[1].multiTarget(0,sunWiggle1);
       cubes[2].multiTarget(0,sunWiggle2);
       cubes[3].multiTarget(0,sunWiggle3);
       cubes[4].multiTarget(0,sunWiggle4);
       cubes[5].multiTarget(0,sunWiggle5);
-   }
+   
+    
+    cubes[0].led(0, 244, 88, 15);
+    cubes[1].led(0, 244, 88, 15);
+    cubes[2].led(0, 244, 88, 15);
+    cubes[3].led(0, 244, 88, 15);
+    cubes[4].led(0, 244, 88, 15);
+    cubes[5].led(0, 244, 88, 15);
     
     //cubes[7].target(cubes[7].x, 150, 0);
     

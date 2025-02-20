@@ -14,7 +14,7 @@ int cubesPerHost = 12;
 int maxMotorSpeed = 115;
 int xOffset;
 int yOffset;
-int counter=0;
+//int counter=0;
 
 //Needed for projection
 PGraphics offscreen1;
@@ -230,40 +230,40 @@ void draw() {
   
   //INSERT YOUR CODE HERE!
   // What is this? LED colors? Can we move this into events, or label for organization?
-    if (counter==100){
-    if (45 <= cubes[6].x && cubes[6].x <= 100)
-    {
-      cubes[6].led(100, 255, 255, 255);
-    }
-    else if (101 <= cubes[6].x && cubes[6].x <= 140)
-    {
-      cubes[6].led(100, 255, 0, 0);
-    }
-    else if (141 <= cubes[6].x && cubes[6].x <= 180)
-    {
-      cubes[6].led(100, 0, 255, 0);
-    }
-    else if (181 <= cubes[6].x && cubes[6].x <= 220)
-    {
-      cubes[6].led(100, 0, 0, 255);
-    }
-    else if (221 <= cubes[6].x && cubes[6].x <= 260)
-    {
-      cubes[6].led(100, 255, 255, 0);
-    }
-    else if (261 <= cubes[6].x && cubes[6].x <= 300)
-    {
-      cubes[6].led(100, 0, 255, 255);
-    }
-    else if (301 <= cubes[6].x && cubes[6].x <= 340)
-    {
-      cubes[6].led(100, 255, 0, 255);
-    }
-    else if (341 <= cubes[6].x && cubes[6].x <= 455)
-    {
-      cubes[6].led(100, 0, 0, 0);
-    } 
-    counter=0;
-    }
-    counter++;
+    //if (counter==100){
+    //if (45 <= cubes[6].x && cubes[6].x <= 100)
+    //{
+    //  cubes[6].led(100, 255, 255, 255);
+    //}
+    //else if (101 <= cubes[6].x && cubes[6].x <= 140)
+    //{
+    //  cubes[6].led(100, 255, 0, 0);
+    //}
+    //else if (141 <= cubes[6].x && cubes[6].x <= 180)
+    //{
+    //  cubes[6].led(100, 0, 255, 0);
+    //}
+    //else if (181 <= cubes[6].x && cubes[6].x <= 220)
+    //{
+    //  cubes[6].led(100, 0, 0, 255);
+    //}
+    //else if (221 <= cubes[6].x && cubes[6].x <= 260)
+    //{
+    //  cubes[6].led(100, 255, 255, 0);
+    //}
+    //else if (261 <= cubes[6].x && cubes[6].x <= 300)
+    //{
+    //  cubes[6].led(100, 0, 255, 255);
+    //}
+    //else if (301 <= cubes[6].x && cubes[6].x <= 340)
+    //{
+    //  cubes[6].led(100, 255, 0, 255);
+    //}
+    //else if (341 <= cubes[6].x && cubes[6].x <= 455)
+    //{
+    //  cubes[6].led(100, 0, 0, 0);
+    //} 
+    //counter=0;
+    //}
+    //counter++;
 }
