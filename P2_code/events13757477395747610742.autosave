@@ -127,22 +127,27 @@ void keyPressed() {
 void buttonDown(int id) {
   println("Button Pressed!");
   
+  
   if (id == 7){
     int city = closestCity(cubes[7].x, cubes[7].y);
     if (city == 1){ // LA
       table = loadTable("LA.csv", "header");
+      currentRow = 0;
       redraw();
     }
     if (city == 2){ // Dallas
       table = loadTable("Dallas.csv", "header");
+      currentRow = 0;
       redraw();
     }
     if (city == 3){ // Chicago
       table = loadTable("Chicago.csv", "header");
+      currentRow = 0; // Reset to the first row
       redraw(); // Update the display
     }
     if (city == 4){ // NYC
       table = loadTable("NYC.csv", "header");
+      currentRow = 0;
       redraw();
     }
   }
