@@ -345,7 +345,7 @@ void rainWind(){
    int closestCity(int x, int y){
      float laDist = sqrt(sq(x - 87) + sq(y - 265));
      float dallasDist = sqrt(sq(x - 248) + sq(y - 319));
-     float chicagoDist = sqrt(sq(x - 4) + sq(y - 188));
+     float chicagoDist = sqrt(sq(x - 294) + sq(y - 183));
      float nycDist = sqrt(sq(x - 405) + sq(y - 186));
      
      float[] floats = {laDist, dallasDist, chicagoDist, nycDist};
@@ -355,17 +355,18 @@ void rainWind(){
      if (minimum == laDist){ // Los angeles
        return 1;
      }
-     if (minimum == dallasDist){ // dallas
+     else if (minimum == dallasDist){ // dallas
        return 2;
      }
-     if (minimum == chicagoDist){ // chicago
+     else if (minimum == chicagoDist){ // chicago
        return 3;
      }
-     if (minimum == nycDist){ // nyc
+     else if (minimum == nycDist){ // nyc
        return 4;
      }
-     
+     else {
+       return 0;
+     }
    
-   
-}
+  }
   
