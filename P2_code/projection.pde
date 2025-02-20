@@ -172,8 +172,8 @@ void draw() {
     // date
     offscreen1.textSize(16);
     offscreen1.textAlign(LEFT);
-    offscreen1.text(dayoftheweek, 10, 45);
-    offscreen1.text(date, 10, 25);
+    offscreen1.text(dayoftheweek, 10, 30);
+    offscreen1.text(date, 10, 15);
     // temperature
     offscreen1.textSize(16);
     offscreen1.text("Hi: " + highTemp + "°F", 20, 215);
