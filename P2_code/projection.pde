@@ -72,6 +72,10 @@ void setup() {
   offscreen1 = createGraphics(400, 300, P3D);
   offscreen2 = createGraphics(400, 300, P3D);
   
+  offscreen1.beginDraw();
+  offscreen1.background(255); // White background
+  offscreen1.endDraw();
+  
   // Load images into the array
   map = new PImage[1]; // Change the size to the number of images you have
   map[0] = loadImage("map.png"); // Replace with your image file names
@@ -135,10 +139,20 @@ void draw() {
   //Projection (Keystone) Stuff
   // Draw the current image onto the offscreen1 buffer
   offscreen1.beginDraw();
-  offscreen1.background(255);
-  offscreen1.fill(0); // White text
+  offscreen1.background(255); // White background to clear the buffer
+  
+  // Draw weather image
+  if (weather_images[weather_currentImageIndex] != null) {
+      offscreen1.image(
+        weather_images[weather_currentImageIndex],
+        0, 0,
+        400, 240); // weather image width and height, gives space for day of the week
+    }
+  
+  offscreen1.fill(0); // Black text
   offscreen1.textSize(16);
   
+  // Display weather text
   if (currentRow < table.getRowCount()) {
     TableRow row = table.getRow(currentRow);
 
@@ -157,7 +171,8 @@ void draw() {
     offscreen1.text("High Temperature: " + highTemp + "°F", 50, 140);
     offscreen1.text("Low Temperature: " + lowTemp + "°F", 50, 170);
     offscreen1.text("Conditions: " + icon, 50, 200);
-    // for day of the week slider
+    
+    // For day of the week slider
     offscreen1.text("Su", 40, 270);
     offscreen1.text("M", 90, 270);
     offscreen1.text("Tu", 140, 270);
@@ -170,19 +185,12 @@ void draw() {
       offscreen1.text("End of data reached.", 50, 50);
     }
     
-    if (weather_images[weather_currentImageIndex] != null) {
-      offscreen1.image(weather_images[weather_currentImageIndex], 0, 0);  // Draw the current weather image
-    }
-    
-
   offscreen1.endDraw();
-  
-  // add stuff for offscreen2, which is just the map
-  
-  // Draw the scene for surface2, offscreen
+
+  // Draw the map onto offscreen2 buffer
   offscreen2.beginDraw();
-  offscreen2.background(255);
-  //offscreen2.fill(255, 0, 0);
+  offscreen2.background(255); // White background to clear buffer
+  
   if (map[map_currentImageIndex] != null) {
     offscreen2.image(map[map_currentImageIndex], 0, 0); // Draw the current (map) image
   }
