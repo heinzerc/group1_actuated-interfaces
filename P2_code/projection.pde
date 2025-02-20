@@ -138,9 +138,18 @@ void draw() {
     offscreen1.text("High Temperature: " + highTemp + "°F", 50, 140);
     offscreen1.text("Low Temperature: " + lowTemp + "°F", 50, 170);
     offscreen1.text("Conditions: " + icon, 50, 200);
-  } else {
-    offscreen1.text("End of data reached.", 50, 50);
-  }
+    // for day of the week slider
+    offscreen1.text("Su", 40, 270);
+    offscreen1.text("M", 90, 270);
+    offscreen1.text("Tu", 140, 270);
+    offscreen1.text("W", 190, 270);
+    offscreen1.text("Th", 240, 270);
+    offscreen1.text("F", 290, 270);
+    offscreen1.text("Sa", 340, 270);
+    } 
+    else {
+      offscreen1.text("End of data reached.", 50, 50);
+    }
   offscreen1.endDraw();
   
   // add stuff for offscreen2, which is just the map
