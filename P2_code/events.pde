@@ -127,7 +127,6 @@ void keyPressed() {
 void buttonDown(int id) {
   println("Button Pressed!");
   
-  
   if (id == 7){
     int city = closestCity(cubes[7].x, cubes[7].y);
     if (city == 1){ // LA
@@ -153,7 +152,7 @@ void buttonDown(int id) {
   }
   
   if (id == 6){
-    int day = closestDay(cubes[7].x);
+    int day = closestDay(cubes[6].x);
     if (day != 0){
       currentRow = day - 1;
       redraw();
