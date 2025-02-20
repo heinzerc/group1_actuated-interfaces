@@ -87,19 +87,6 @@ class Cube {
      posture = face_up;
      shake = shake_level;
      
-     //insert code here
-     
-     if (collision) {
-       onCollision();
-     }
-     
-     if (doubleTap) {
-       onDoubleTap();
-     }
-     
-     if (shake>2){
-       onShake(shake);
-     }
        
   }
   
@@ -152,13 +139,6 @@ class Cube {
   //Execute this code on collision
   void onCollision() {
     collision(id);
-    
-    //insert code here
-  }
-  
-  //Execute this code on double tap
-  void onDoubleTap() {
-    doubleTap(id);
     
     //insert code here
   }
