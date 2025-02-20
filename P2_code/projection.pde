@@ -24,8 +24,10 @@ PGraphics offscreen2;
 Table table;
 int currentRow = 0;
 
-PImage[] images; // Array to hold images
-int currentImageIndex = 0; // Index of the currently displayed image
+PImage[] map; // Array to hold the map
+PImage[] weather_images;
+int map_currentImageIndex = 0; // Index of the currently displayed image
+int weather_currentImageIndex = 0; 
 
 //// Instruction for Windows Users  (Feb 2. 2025) ////
 // 1. Enable WindowsMode and set nCubes to the exact number of toio you are connecting.
@@ -71,8 +73,16 @@ void setup() {
   offscreen2 = createGraphics(400, 300, P3D);
   
   // Load images into the array
-  images = new PImage[1]; // Change the size to the number of images you have
-  images[0] = loadImage("map.png"); // Replace with your image file names
+  map = new PImage[1]; // Change the size to the number of images you have
+  map[0] = loadImage("map.png"); // Replace with your image file names
+  
+  // Load weather images into the array
+  weather_images = new PImage[5]; // Change the size to the number of images you have
+  weather_images[0] = loadImage("sun.gif"); // Replace with your image file names
+  weather_images[1] = loadImage("wind.gif");
+  weather_images[2] = loadImage("rain.gif");
+  weather_images[3] = loadImage("windrain.gif");
+  weather_images[4] = loadImage("snow.gif");
   
   // Load the CSV file
   table = loadTable("Chicago.csv", "header"); //default csv is Chicago
@@ -81,10 +91,19 @@ void setup() {
   textSize(16);
   fill(0); // black text
   
-  //// Resize images to fit the offscreen buffer
-  for (int i = 0; i < images.length; i++) {
-    if (images[i] != null) {
-      images[i].resize(offscreen2.width, offscreen2.height);
+  //// Resize images to fit the offscreen1 buffer
+  for (int i = 0; i < weather_images.length; i++) {
+    if (weather_images[i] != null) {
+      weather_images[i].resize(offscreen1.width, offscreen2.height);
+    } else {
+      println("Error: Image " + i + " could not be loaded.");
+    }
+  }
+  
+  //// Resize images to fit the offscreen2 buffer
+  for (int i = 0; i < map.length; i++) {
+    if (map[i] != null) {
+      map[i].resize(offscreen2.width, offscreen2.height);
     } else {
       println("Error: Image " + i + " could not be loaded.");
     }
@@ -150,6 +169,12 @@ void draw() {
     else {
       offscreen1.text("End of data reached.", 50, 50);
     }
+    
+    if (weather_images[weather_currentImageIndex] != null) {
+      offscreen1.image(weather_images[weather_currentImageIndex], 0, 0);  // Draw the current weather image
+    }
+    
+
   offscreen1.endDraw();
   
   // add stuff for offscreen2, which is just the map
@@ -158,8 +183,8 @@ void draw() {
   offscreen2.beginDraw();
   offscreen2.background(255);
   //offscreen2.fill(255, 0, 0);
-  if (images[currentImageIndex] != null) {
-    offscreen2.image(images[currentImageIndex], 0, 0); // Draw the current image
+  if (map[map_currentImageIndex] != null) {
+    offscreen2.image(map[map_currentImageIndex], 0, 0); // Draw the current (map) image
   }
   offscreen2.endDraw();
   
