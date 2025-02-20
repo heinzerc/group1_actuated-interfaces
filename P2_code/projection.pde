@@ -138,7 +138,7 @@ void draw() {
     offscreen1.text("High Temperature: " + highTemp + "°F", 50, 140);
     offscreen1.text("Low Temperature: " + lowTemp + "°F", 50, 170);
     offscreen1.text("Conditions: " + icon, 50, 200);
-    
+    // for day of the week slider
     offscreen1.text("Su", 40, 270);
     offscreen1.text("M", 90, 270);
     offscreen1.text("Tu", 140, 270);
