@@ -127,30 +127,39 @@ void keyPressed() {
 void buttonDown(int id) {
   println("Button Pressed!");
   
-  int city = closestCity(cubes[7].x, cubes[7].y);
-  if (id != 7){
-    //do nothing
+  
+  if (id == 7){
+    int city = closestCity(cubes[7].x, cubes[7].y);
+    if (city == 1){ // LA
+      table = loadTable("LA.csv", "header");
+      currentRow = 0;
+      redraw();
+    }
+    if (city == 2){ // Dallas
+      table = loadTable("Dallas.csv", "header");
+      currentRow = 0;
+      redraw();
+    }
+    if (city == 3){ // Chicago
+      table = loadTable("Chicago.csv", "header");
+      currentRow = 0; // Reset to the first row
+      redraw(); // Update the display
+    }
+    if (city == 4){ // NYC
+      table = loadTable("NYC.csv", "header");
+      currentRow = 0;
+      redraw();
+    }
   }
-  else if (city == 1){ // LA
-    table = loadTable("LA.csv", "header");
-    currentRow = 0;
-    redraw();
+  
+  if (id == 6){
+    int day = closestDay(cubes[7].x);
+    if (day != 0){
+      currentRow = day - 1;
+      redraw();
+    }
   }
-  else if (city == 2){ // Dallas
-    table = loadTable("Dallas.csv", "header");
-    currentRow = 0;
-    redraw();
-  }
-  else if (city == 3){ // Chicago
-    table = loadTable("Chicago.csv", "header");
-    currentRow = 0; // Reset to the first row
-    redraw(); // Update the display
-  }
-  else if (city == 4){ // NYC
-    table = loadTable("NYC.csv", "header");
-    currentRow = 0;
-    redraw();
-  }
+  
 }
 
 //execute code when button on toio is released
@@ -340,31 +349,71 @@ void rainWind(){
    }
 }
    
-   int closestCity(int x, int y){
-     float laDist = sqrt(sq(x - 87) + sq(y - 265));
-     float dallasDist = sqrt(sq(x - 248) + sq(y - 319));
-     float chicagoDist = sqrt(sq(x - 294) + sq(y - 183));
-     float nycDist = sqrt(sq(x - 405) + sq(y - 186));
-     
-     float[] floats = {laDist, dallasDist, chicagoDist, nycDist};
-     
-     float minimum = min(floats);
-     
-     if (minimum == laDist){ // Los angeles
-       return 1;
-     }
-     else if (minimum == dallasDist){ // dallas
-       return 2;
-     }
-     else if (minimum == chicagoDist){ // chicago
-       return 3;
-     }
-     else if (minimum == nycDist){ // nyc
-       return 4;
-     }
-     else {
-       return 0;
-     }
+int closestCity(int x, int y){
+   float laDist = sqrt(sq(x - 87) + sq(y - 265));
+   float dallasDist = sqrt(sq(x - 248) + sq(y - 319));
+   float chicagoDist = sqrt(sq(x - 294) + sq(y - 183));
+   float nycDist = sqrt(sq(x - 405) + sq(y - 186));
    
-  }
-  
+   float[] floats = {laDist, dallasDist, chicagoDist, nycDist};
+   
+   float minimum = min(floats);
+   
+   if (minimum == laDist){ // Los angeles
+     return 1;
+   }
+   else if (minimum == dallasDist){ // dallas
+     return 2;
+   }
+   else if (minimum == chicagoDist){ // chicago
+     return 3;
+   }
+   else if (minimum == nycDist){ // nyc
+     return 4;
+   }
+   else {
+     return 0;
+   }
+     
+     
+   
+}
+int closestDay(int x){ // locations in order from sun: 99 146 201 247 300 343 399
+   int sunDist = abs(99 - x);
+   int monDist = abs(146 - x);
+   int tuesDist = abs(201 - x);
+   int wedDist = abs(247 - x);
+   int thursDist = abs(300 - x);
+   int friDist = abs(343 - x);
+   int satDist = abs(399 - x);
+   
+   int[] ints = {sunDist, monDist, tuesDist, wedDist, thursDist, friDist, satDist};
+   
+   int minimum = min(ints);
+   
+   if (minimum == sunDist){ // Sun
+     return 1;
+   }
+   else if (minimum == monDist){ // Mon
+     return 2;
+   }
+   else if (minimum == tuesDist){ // Tues
+     return 3;
+   }
+   else if (minimum == wedDist){ // Wed
+     return 4;
+   }
+   else if (minimum == thursDist){ // Thurs
+     return 5;
+   }
+   else if (minimum == friDist){ // Fri
+     return 6;
+   }
+   else if (minimum == satDist){ // Sat
+     return 7;
+   }
+   else {
+     return 0;
+   }
+     
+}
